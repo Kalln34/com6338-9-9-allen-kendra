@@ -14,9 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!userQuery) return;
 
     const apiKey = "9bffa1724249c6bb0a35f38003f5f95b";
-    var weatherURL = "https://api.openweathermap.org/data/2.5/weather";
-    var queryString = "?units=imperial&appid=" + apiKey + "&q=" + userQuery;
-    var fetchURL = weatherURL + queryString;
+    const weatherURL = "https://api.openweathermap.org/data/2.5/weather";
+    const queryString = `?units=imperial&appid=${apiKey}&q=${userQuery}`;
+    const fetchURL = `${weatherURL}${queryString}`;
 
 
     try {
@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
         minute: "2-digit",
       });
 
-      var mapLink = `https://www.google.com/maps/search/?api=1&query=${lat},${lon}`;
-      var iconUrl = `https://openweathermap.org/img/wn/${condition.icon}@2x.png`;
+      const mapLink = `https://www.google.com/maps/search/?api=1&query=${lat},${lon}`;
+      const iconUrl = `https://openweathermap.org/img/wn/${condition.icon}@2x.png`;
 
         weatherSection.innerHTML = `
         <h2 id="example-loc">${city}, ${country}</h2>
